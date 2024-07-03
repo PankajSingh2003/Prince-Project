@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/components/layout/footer Render Footer component 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-1swgbew"
+  >
+    <div
+      class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+    >
+      © 
+      2022
+       TARIQ LAMIN GUESRI. ALL RIGHTS RESERVED.
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,25 @@
+{
+  "name": "quiz-maker",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "server": "cd backend && yarn dev",
+    "client": "cd frontend && yarn start",
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "lint:check": "concurrently \"cd backend && yarn lint:check\" \"cd frontend && yarn lint:check\"",
+    "lint:fix": "concurrently \"cd backend && yarn lint:fix\" \"cd frontend && yarn lint:fix\"",
+    "test": "concurrently \"cd backend && yarn test\" \"cd frontend && yarn test\"",
+    "test:cov": "concurrently \"cd backend && yarn test:cov\" \"cd frontend && yarn test:cov\"",
+    "build": "concurrently \"cd backend && yarn build\" \"cd frontend && yarn build && copyfiles build/** ../backend/dist/client",
+    "start":"cd backend && yarn start",
+    "start:build":"yarn build && yarn start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "copyfiles": "^2.4.1"
+  }
+}
